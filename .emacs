@@ -225,31 +225,6 @@ If parent directories don't exist, offer to create them."
 (with-eval-after-load 'gruber-darker-theme
   (load-theme 'gruber-darker t))
 
-;; Org mode configuration
-(use-package org
-  :ensure t
-  :config
-  ;; Some basic org-mode settings
-  (setq org-startup-indented t)         ; Enable indentation mode by default
-  (setq org-startup-folded t)           ; Start files with overview mode
-  (setq org-hide-leading-stars t)       ; Hide repeated stars in headlines
-  
-  ;; Default notes file and agenda files
-  (setq org-default-notes-file "~/org/notes.org")
-  (setq org-agenda-files '("~/org/")))
-
-;; Optional: Add org-mode file association
-(add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
-
-;; Optional: Evil org-mode integration
-(use-package evil-org
-  :ensure t
-  :after (evil org)
-  :hook (org-mode . evil-org-mode)
-  :config
-  (require 'evil-org-agenda)
-  (evil-org-agenda-set-keys))
-
 (use-package zig-mode
   :ensure t
   :mode "\\.zig\\'")
