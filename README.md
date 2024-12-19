@@ -1,7 +1,7 @@
 ## System
 
 - **OS**: Fedora Linux (Sway Spin)
-- **Package Management**: System packages via DNF, with additional packages through Nix
+- **Package Management**: System packages via DNF5, with additional packages through Nix
 
 ## Important Notes
 
