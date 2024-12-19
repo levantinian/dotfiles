@@ -9,6 +9,6 @@ The clipboard management tools (`cliphist` and `wl-clipboard`) are installed thr
 
 ## Other Utilities
 
-* **mupdf** for PDF files.
-* **imv** for images.
-* **mpv** for videos.
+* **mupdf** for PDF files
+* **imv** for images
+* **mpv** for videos
