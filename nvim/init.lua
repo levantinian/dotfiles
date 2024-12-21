@@ -72,8 +72,15 @@ _G.toggle_terminal = function()
         end
 
         if terminal_win then
-            vim.api.nvim_win_close(terminal_win, true)
+            -- If we're currently in the terminal window, close it
+            if vim.api.nvim_get_current_win() == terminal_win then
+                vim.api.nvim_win_close(terminal_win, true)
+            else
+                -- If we're in a different window, focus the terminal
+                vim.api.nvim_set_current_win(terminal_win)
+            end
         else
+            -- Terminal exists but has no window, create new split
             vim.cmd('botright split')
             vim.api.nvim_win_set_buf(0, terminal_bufnr)
             if current_dir ~= last_dir then
@@ -82,6 +89,7 @@ _G.toggle_terminal = function()
             end
         end
     else
+        -- No terminal exists, create new one
         vim.cmd('botright split')
         vim.cmd('lcd ' .. vim.fn.fnameescape(current_dir))
         vim.cmd('term')
