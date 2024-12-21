@@ -8,6 +8,7 @@
 (setq use-package-always-ensure t)  ; Auto-install packages
 
 (setq ring-bell-function 'ignore)   
+(setq evil-insert-state-cursor 'box)
 (menu-bar-mode 0)
 (tool-bar-mode 0)
 (scroll-bar-mode 0)
