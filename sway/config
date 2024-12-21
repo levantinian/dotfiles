@@ -37,6 +37,7 @@ default_border pixel 2
 gaps inner 5
 gaps outer 2
 for_window [app_id="flameshot"] floating enable, fullscreen disable, move absolute position 0 0, border pixel 0
+default_orientation vertical
 for_window [class=".*"] split toggle
 #
 # Example configuration:
